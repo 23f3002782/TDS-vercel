@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 import json
@@ -24,7 +24,7 @@ def read_root():
     return {"message": "Hello, World!"}
 
 @app.get("/api")
-def get_marks(name: List[str]):
+def get_marks(name: List[str] = Query(..., description="List of student names to get marks for")):
     marks = []
     for student_name in name:
         marks.append(student_marks.get(student_name, 0))
