@@ -1,1 +1,21 @@
+# Core FastAPI and server
 fastapi
+uvicorn[standard]
+
+# Data validation and models
+pydantic
+
+# Environment variables
+python-dotenv
+
+# Vector database
+pinecone
+
+# Hugging Face integration
+huggingface_hub
+
+# Text embeddings
+sentence-transformers
+
+# Image processing
+Pillow
